@@ -168,14 +168,19 @@
                 // alert("tes");
                 console.log(this.parentNode.parentNode);
                 root_l=this.parentNode.parentNode;
-                root_l.style="border-left:2px solid red !important;";
+                root_l.style="border-left:2px solid blue !important;";
             });
 
             $(".button_click").focusout(function(el){
-                // alert("tes");
-                console.log(this.parentNode.parentNode);
+                // console.log(this.value);
+                if(this.value==""){
+                //    console.log(this.parentNode.parentNode)
+                root_l=this.parentNode.parentNode;
+                root_l.style="border-left: 2px solid red !important;";
+                }else{
                 root_l=this.parentNode.parentNode;
                 root_l.style="border-left: 0 !important;";
+                }
             });
         </script>
     </body>
